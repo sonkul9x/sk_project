@@ -47,7 +47,7 @@ class CustomerController extends Controller
                 <h4 class="modal-title" id="myModalLabel">Infomation Customer</h4>
               </div>
               <div class="modal-body">
-                <table class="table table-hover">
+                <table class="table table-bordered">
                         <thead>
                           <tr>
                             <th>Fullname</th>

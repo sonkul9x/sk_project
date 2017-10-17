@@ -78,3 +78,7 @@
         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
       </div>
 @endsection
+@section('script')
+<!-- Custom scripts for this page-->
+<script src="{!! asset('public/admin') !!}/js/sb-admin-datatables.min.js"></script>
+@endsection

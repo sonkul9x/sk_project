@@ -73,7 +73,7 @@ jQuery(document).ready(function(){
       data: {id: id}, 
     success:function(html){
       $("#modal").html(html);
-      //$("#modal").modal('show');
+      $("#modal").modal("show");     
     }   
   });
   });

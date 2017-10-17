@@ -91,7 +91,7 @@
           </a>       
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Customers">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="{!! route('getCustomerList') !!}">
              <i class="fa fa-user-circle" aria-hidden="true"></i>
             <span class="nav-link-text">Customers</span>
           </a>       
@@ -265,8 +265,7 @@
     <script src="{!! asset('public/admin') !!}/vendor/datatables/dataTables.bootstrap4.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="{!! asset('public/admin') !!}/js/sb-admin.js"></script>
-    <!-- Custom scripts for this page-->
-    <script src="{!! asset('public/admin') !!}/js/sb-admin-datatables.min.js"></script>
+    
     @yield('script')
   </div>
 </body>
