@@ -23,7 +23,7 @@ class PageController extends Controller
      */
     public function index()
     {
-        $pages = $this->_PageRepository->getAllPage();
+        $pages = $this->_PageRepository->getAll();
         return view('admin.modules.page.list', ['pages' => $pages]);
     }
 

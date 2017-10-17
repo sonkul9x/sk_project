@@ -13,10 +13,7 @@ class PageEloquentRepository extends EloquentRepository implements PageRepositor
     public function getModel()
     {
         return \App\Models\Page::class;
-    }    
-   public function getAllPage()
-    {
-        return $this->_model->all();
-    }
+    }   
+  
 
 }

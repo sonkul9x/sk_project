@@ -23,7 +23,6 @@ class NewsEloquentRepository extends EloquentRepository implements NewsRepositor
     public function getAllPublished()
     {
         $result = $this->_model->where('status', 1)->get();
-
         return $result;
     }
 
@@ -41,10 +40,6 @@ class NewsEloquentRepository extends EloquentRepository implements NewsRepositor
             ->first();
 
         return $result;
-    }
-    public function getAllNew()
-    {
-        return $this->_model->all();
     }
      /**
      * Get All Join

@@ -30,7 +30,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $news = $this->_NewsRepository->getAllNew();
+        $news = $this->_NewsRepository->getAll();
         return view('admin.modules.news.list', compact('news'));
     }
 
@@ -41,7 +41,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        $cate = $this->_CateRepository->getAllCat();
+        $cate = $this->_CateRepository->getAll();
         return view('admin.modules.news.add',['cate' => $cate]);
     }
 
@@ -91,7 +91,7 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        $Cate = $this->_CateRepository->getAllCat();
+        $Cate = $this->_CateRepository->getAll();
         $data = $this->_NewsRepository->find($id);
         return view('admin.modules.news.edit',['data' => $data,'Cate' => $Cate]);
     }

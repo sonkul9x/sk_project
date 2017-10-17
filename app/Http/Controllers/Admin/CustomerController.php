@@ -22,7 +22,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        $data = $this->_CustomerRepository->getAll();        
+        $data = $this->_CustomerRepository->getAllWithPagi(20);        
         return view('admin.modules.customer.list',['data' => $data]);
     }
 

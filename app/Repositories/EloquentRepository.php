@@ -38,13 +38,21 @@ abstract class EloquentRepository implements RepositoryInterface
      */
     public function getAll()
     {
-        if(!empty(config('constants.NEW_IN_PAGE'))){
-            return $this->_model->select('*')->paginate(config('constants.NEW_IN_PAGE'));
-        }else{
-            return $this->_model->all();
-        }        
+        return $this->_model->all();    
     }
-    
+     /**
+     * Get All Pagination
+     * @return \Illuminate\Database\Eloquent\Collection|static[]
+     */
+    public function getAllWithPagi($number=null)
+    {
+
+        if($number==null){
+            return $this->_model->select('*')->paginate(config('constants.ITEM_PAGI_DEFAUIL'));
+        }else{
+            return $this->_model->select('*')->paginate($number);
+        }
+    }
     /**
      * Get one
      * @param $id

@@ -26,9 +26,4 @@ class CateEloquentRepository extends EloquentRepository implements CateRepositor
     		return false;
     	}
     }
-    public function getAllCat()
-    {
-        return $this->_model->all();
-    }
-
 }

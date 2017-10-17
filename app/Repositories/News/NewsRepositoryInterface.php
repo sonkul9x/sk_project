@@ -15,7 +15,7 @@ interface NewsRepositoryInterface
      */
     public function findOnlyPublished($id);
 
-    public function getAllNew();
+   
     /**
      * Get All Join
      * @return \Illuminate\Database\Eloquent\Collection|static[]

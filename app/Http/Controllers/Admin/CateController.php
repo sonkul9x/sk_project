@@ -27,7 +27,7 @@ class CateController extends Controller
      */
     public function index()
     {
-        $cate = $this->_CateRepository->getAllCat();
+        $cate = $this->_CateRepository->getAll();
         return view('admin.modules.cate.list', ['listCat' => $cate]);
     }
 
@@ -38,7 +38,7 @@ class CateController extends Controller
      */
     public function create()
     {
-        $data = $this->_CateRepository->getAllCat();
+        $data = $this->_CateRepository->getAll();
         return view('admin.modules.cate.add',['datacat' => $data]);
     }
 
@@ -67,7 +67,7 @@ class CateController extends Controller
      */
     public function edit($id)
     {
-        $dataAll = $this->_CateRepository->getAllCat();
+        $dataAll = $this->_CateRepository->getAll();
         $data = $this->_CateRepository->find($id);
         return view('admin.modules.cate.edit',['data' => $data,'dataAll' => $dataAll]);
     }
